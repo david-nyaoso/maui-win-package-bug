@@ -23,7 +23,7 @@ Make sure the Deploy checkbox is ticked for the 'UsedToWork' project.
 
 
 Add the below xml fragment to Application Node in Package.appxmanifest file in the Platforms/Windows directory.
-
+```
  <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
         ...
       <Extensions>
@@ -34,9 +34,9 @@ Add the below xml fragment to Application Node in Package.appxmanifest file in t
         </uap:Extension>
       </Extensions>
 </Application>
-
+```
 Check the code file, PackageHelpers.cs, in Platforms\Windows folder.
 
 I have also added a button in MainPage.xaml and code in to call a function in
 PackageHelpers.cs. CLick on the button. The results show that when the app is unpackaged, you can not
-access global::Windows.ApplicationModel.Package API.
+access ``global::Windows.ApplicationModel.Package API``.
